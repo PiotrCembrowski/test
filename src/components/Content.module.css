@@ -1,0 +1,9 @@
+.content {
+  box-sizing: border-box;
+  width: 766px;
+  height: 673px;
+  margin-top: 32px;
+  padding: 20px;
+  border-radius: 16px;
+  background: #fff;
+}

@@ -1,0 +1,113 @@
+.TopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  min-width: 1564px;
+  max-width: 100%;
+  margin: 18px auto;
+  background: #fff;
+  border-radius: 70px;
+  padding: 0 33px;
+}
+
+nav {
+  height: 63px;
+  width: 663px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 41px;
+  width: 122px;
+  height: 41px;
+}
+
+nav li:hover {
+  background: #01f0d0;
+}
+
+nav img {
+  height: 17px;
+}
+
+nav a {
+  font-size: 14px;
+}
+
+.TopBar span {
+  display: flex;
+  flex-direction: column;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: #072635;
+}
+
+p {
+  color: #072635;
+}
+
+svg,
+img {
+  margin-right: 8px;
+}
+
+.lightText {
+  color: #707070;
+}
+
+.navBox,
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  margin-right: 9px;
+  height: 44px;
+  width: 44px;
+}
+
+.profile div {
+  display: flex;
+  justify-content: center;
+  border-right: 2px solid #ededed;
+  margin-right: 10px;
+  padding-right: 12px;
+}
+
+.profile div p {
+  margin: 0 0;
+}
+
+.profile div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.settings img {
+  height: 20px;
+}
+
+.settings div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18px;
+}

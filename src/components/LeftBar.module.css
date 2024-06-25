@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+.leftbar {
+  width: 367px;
+  height: 1054px;
+  margin-top: 32px;
+  padding: 20px 4px 30px 20px;
+  background: #fff;
+  border-radius: 16px;
+  overflow-y: hidden;
+}
+
+.leftbar h2 {
+  font-size: 24px;
+  color: #072635;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+.searchBar img {
+  height: 18px;
+}
+
+.leftbar ul {
+  padding: 0;
+}
+
+.leftbar li {
+  display: flex;
+  height: 48px;
+  width: 317px;
+  margin: 32px 0 0 0;
+}
+
+.patientsList {
+  max-height: calc(100% - 93px);
+  overflow-y: scroll;
+}
+
+.leftbar .patientList img {
+  height: 48px;
+}
+
+.leftbar p {
+  margin: 0;
+}
+
+.leftbar p + p {
+  color: #707070;
+}
+
+.loadingIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 18px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.loadingIcon span {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: #072635;
+}
+
+.patientsList::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.patientsList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.patientsList::-webkit-scrollbar-thumb {
+  background-color: #072635;
+  height: 30px;
+}
