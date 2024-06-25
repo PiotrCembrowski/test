@@ -1,0 +1,10 @@
+.chartBox {
+  height: 100% !important;
+  width: 70% !important;
+}
+
+.chartBoxTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
