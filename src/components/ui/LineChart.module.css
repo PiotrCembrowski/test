@@ -8,3 +8,19 @@
   justify-content: space-between;
   align-items: start;
 }
+
+.dateBox {
+  display: flex;
+  align-items: center;
+  margin-right: 2em;
+}
+
+.dateBox p {
+  margin: 0;
+  margin-right: 16px;
+  line-height: 1;
+}
+
+.dateBox svg {
+  margin-bottom: 0;
+}

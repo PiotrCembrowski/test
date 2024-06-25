@@ -34,7 +34,7 @@ const LineChart = () => {
     <div className={styles.chartBox}>
       <div className={styles.chartBoxTitle}>
         <h3>Blood Pressure</h3>
-        <div>
+        <div className={styles.dateBox}>
           <p>Last 6 Months</p>
           <svg width="10.646" height="6" viewBox="0 0 10.646 6">
             <path
