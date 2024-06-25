@@ -1,5 +1,5 @@
-import ChartResult from "./ChartResult";
-import LineChart from "./LineChart";
+import ChartResult from "./ui/ChartResult";
+import LineChart from "./ui/LineChart";
 import styles from "./ChartComponent.module.css";
 
 const ChartComponent = () => {
@@ -14,6 +14,7 @@ const ChartComponent = () => {
           level="Higher than Average"
           color="#E66FD2"
         />
+        <hr />
         <ChartResult
           title="Diastolic"
           hRate="78"
