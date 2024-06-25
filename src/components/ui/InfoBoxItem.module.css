@@ -1,0 +1,13 @@
+.box {
+  border-radius: 12px;
+  padding: 16px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 800;
+}
