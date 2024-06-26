@@ -5,6 +5,7 @@
   margin-top: 32px;
   padding: 20px;
   border-radius: 16px;
+  overflow: hidden;
 }
 
 .container h2 {
@@ -18,13 +19,17 @@ table {
   width: 100%;
 }
 
+.scrollContent {
+  overflow-y: scroll;
+}
+
 table tr {
   display: flex;
   flex-direction: row;
   justify-content: start;
   padding: 0 14px;
   margin-top: 19px;
-  margin-bottom: 19px;
+  margin-bottom: 37px;
   line-height: 1;
   text-align: left;
 }
@@ -46,4 +51,19 @@ table .topbar {
   padding: 14px;
   background: #f6f7f8;
   border-radius: 24px;
+}
+
+.scrollContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.scrollContent::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.scrollContent::-webkit-scrollbar-thumb {
+  background-color: #072635;
+  height: 30px;
 }

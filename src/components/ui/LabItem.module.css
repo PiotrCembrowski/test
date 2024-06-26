@@ -1,0 +1,10 @@
+.labItem {
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0 !important;
+}
+
+.labItem:hover {
+  background: #f6f7f8;
+}

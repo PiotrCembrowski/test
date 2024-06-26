@@ -1,0 +1,11 @@
+.container {
+  background: #fff;
+  margin-top: 32px;
+  min-height: 300px;
+  border-radius: 16px;
+}
+
+.container ul {
+  padding-left: 20px;
+  padding-right: 20px;
+}

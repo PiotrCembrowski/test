@@ -6,7 +6,12 @@
 .chartBoxTitle {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
+}
+
+.chartBox h3 {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .dateBox {
