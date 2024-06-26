@@ -18,7 +18,9 @@ ul {
 
 p,
 li,
-a {
+a,
+th,
+td {
   font-size: 14px;
 }
 

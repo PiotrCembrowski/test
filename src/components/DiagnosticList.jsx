@@ -3,9 +3,9 @@ import styles from "./DiagnosticList.module.css";
 const DiagnosticList = () => {
   return (
     <div className={styles.container}>
-      <h2>DiagnosticList</h2>
+      <h2>Diagnostic List</h2>
       <table>
-        <tr>
+        <tr className={styles.topbar}>
           <th>Problem/Diagnosis</th>
           <th>Description</th>
           <th>Status</th>

@@ -1,0 +1,53 @@
+.container {
+  background: #fff;
+  max-height: 740px;
+  width: 367px;
+  border-radius: 16px;
+  margin-top: 16px;
+}
+
+.container img {
+  display: block;
+  width: 200px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.container li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.container p {
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: 16px;
+}
+
+.container p + p {
+  font-weight: bold;
+}
+
+.container a {
+  display: block;
+  color: #072635;
+  background: #01f0d0;
+  width: 220px;
+  height: 41px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 41px;
+  text-align: center;
+  line-height: 41px;
+  text-decoration: none;
+  font-weight: bold;
+}
