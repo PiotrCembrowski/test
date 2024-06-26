@@ -34,10 +34,10 @@ const BioSection = () => {
   }, [authString]);
   return (
     <>
-      {patients.map((patient) => {
+      {patients.map((patient, index) => {
         if (patient.name == "Jessica Taylor") {
           return (
-            <>
+            <div key={index}>
               <img src={patient.profile_picture} />
               <h2>{patient.name}</h2>
               <div>
@@ -171,7 +171,7 @@ const BioSection = () => {
                 </ul>
                 <a href="#">Show All Information</a>
               </div>
-            </>
+            </div>
           );
         }
       })}

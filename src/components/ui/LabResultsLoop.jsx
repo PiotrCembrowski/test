@@ -38,8 +38,8 @@ const LabResultsLoop = () => {
     <ul>
       {patients.map((patient) => {
         if (patient.name == "Jessica Taylor") {
-          return patient.lab_results.map((item) => {
-            return <LabItem title={item} />;
+          return patient.lab_results.map((item, index) => {
+            return <LabItem title={item} key={index} />;
           });
         }
       })}

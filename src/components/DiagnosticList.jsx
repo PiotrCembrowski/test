@@ -37,20 +37,22 @@ const DiagnosticList = () => {
   return (
     <div className={styles.container}>
       <h2>Diagnostic List</h2>
-      <table>
-        <tr className={styles.topbar}>
-          <th>Problem/Diagnosis</th>
-          <th>Description</th>
-          <th>Status</th>
-        </tr>
-      </table>
+      <div>
+        <table>
+          <tr className={styles.topbar}>
+            <th>Problem/Diagnosis</th>
+            <th>Description</th>
+            <th>Status</th>
+          </tr>
+        </table>
+      </div>
       <table className={styles.scrollContent}>
         {patients.map((patient) => {
           if (patient.name == "Jessica Taylor") {
             const diagnosticList = patient.diagnostic_list;
-            return diagnosticList.map((item) => {
+            return diagnosticList.map((item, index) => {
               return (
-                <tr>
+                <tr key={index}>
                   <td>{item.name}</td>
                   <td>{item.description}</td>
                   <td>{item.status}</td>

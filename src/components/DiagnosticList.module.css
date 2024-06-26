@@ -5,7 +5,7 @@
   margin-top: 32px;
   padding: 20px;
   border-radius: 16px;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .container h2 {
@@ -57,12 +57,10 @@ table .topbar {
   width: 6px;
 }
 
-/* Track */
 .scrollContent::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
 .scrollContent::-webkit-scrollbar-thumb {
   background-color: #072635;
   height: 30px;
