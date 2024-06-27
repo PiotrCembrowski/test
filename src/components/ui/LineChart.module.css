@@ -29,3 +29,9 @@
 .dateBox svg {
   margin-bottom: 0;
 }
+
+@media (max-width: 780px) {
+  .chartBox {
+    width: 100% !important;
+  }
+}

@@ -111,3 +111,22 @@ img {
   justify-content: space-between;
   height: 18px;
 }
+
+@media (max-width: 1564px) {
+  .TopBar {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1240px) {
+  nav {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile {
+    display: none;
+  }
+}

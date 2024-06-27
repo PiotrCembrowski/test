@@ -1,3 +1,7 @@
+.container {
+  grid-area: middle;
+}
+
 .content {
   box-sizing: border-box;
   width: 48vw;
@@ -11,4 +15,28 @@
 
 .content h2 {
   margin-top: 0;
+}
+
+@media (max-width: 1240px) {
+  .container > .content {
+    width: 100%;
+    max-width: 100%;
+    max-height: 80vh;
+  }
+}
+
+@media (max-width: 780px) {
+  .container > .content {
+    width: 95vw;
+    max-width: 95vw;
+    max-height: 120vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .container > .content {
+    width: 95vw;
+    max-width: 95vw;
+    max-height: 150vh;
+  }
 }

@@ -1,4 +1,5 @@
 .container {
+  grid-area: right;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7,12 +8,6 @@
   width: 367px;
   border-radius: 16px;
   margin-top: 16px;
-}
-
-@media (max-width: 1400px) {
-  .container {
-    max-width: 367px;
-  }
 }
 
 .container img {
@@ -59,4 +54,25 @@
   line-height: 41px;
   text-decoration: none;
   font-weight: bold;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 367px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .container {
+    margin-top: 32px;
+    height: 1054px;
+    max-height: 1054px;
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    width: 95vw;
+    max-width: 95vw;
+  }
 }
