@@ -1,7 +1,7 @@
 .chartContainer {
   display: flex;
-  width: 726px;
-  height: 298px;
+  max-width: 726px;
+  max-height: 298px;
   padding: 16px;
   background: #f4f0fe;
   border-radius: 12px;

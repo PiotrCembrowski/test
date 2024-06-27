@@ -28,4 +28,5 @@ main {
   display: flex;
   justify-content: space-between;
   max-width: 1600px;
+  gap: 20px;
 }

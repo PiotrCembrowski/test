@@ -3,7 +3,9 @@
 }
 
 .leftbar {
-  width: 367px;
+  min-width: 300px;
+  max-width: 23%;
+  flex-basis: 23%;
   height: 1054px;
   margin-top: 32px;
   padding: 20px 4px 30px 20px;
@@ -35,7 +37,7 @@
 .leftbar li {
   display: flex;
   height: 48px;
-  width: 317px;
+  max-width: 317px;
   margin: 32px 0 0 0;
 }
 
@@ -64,6 +66,12 @@
   width: 18px;
   margin-left: auto;
   margin-right: 0;
+}
+
+@media (max-width: 1580px) {
+  .loadingIcon {
+    margin-right: 20px;
+  }
 }
 
 .loadingIcon span {

@@ -9,6 +9,12 @@
   margin-top: 16px;
 }
 
+@media (max-width: 1400px) {
+  .container {
+    max-width: 367px;
+  }
+}
+
 .container img {
   display: block;
   width: 200px;
