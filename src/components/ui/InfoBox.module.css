@@ -4,10 +4,17 @@
   align-items: stretch;
   gap: 21px;
   margin-top: 20px;
+  height: 242px;
 }
 
 .container div {
   flex: 1;
+}
+
+@media (max-width: 1600px) {
+  .container {
+    height: 257px;
+  }
 }
 
 @media (max-width: 600px) {

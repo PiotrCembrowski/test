@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import InfoBoxItem from "./InfoBoxItem";
 import heartIcon from "/Heart.svg";
 import respiratoryIcon from "/respiratory.svg";
@@ -5,6 +6,54 @@ import temperatureIcon from "/temperature.svg";
 import styles from "./InfoBox.module.css";
 
 const InfoBox = () => {
+  const username = "coalition";
+  const password = "skills-test";
+  let authString = btoa(username + ":" + password);
+
+  const [heartRate, setHeartRate] = useState();
+  const [heartLevel, setHeartLevel] = useState();
+  const [respiratoryRate, setRespiratoryRate] = useState();
+  const [respiratoryLevel, setRespiratoryLevel] = useState();
+  const [temperature, setTemperature] = useState();
+  const [temperatureLevel, setTemperatureLevel] = useState();
+
+  useEffect(() => {
+    async function fetchPatients() {
+      const response = await fetch(
+        `https://fedskillstest.coalitiontechnologies.workers.dev/`,
+        {
+          method: "GET",
+          headers: new Headers({
+            Authorization: `Basic ${authString}`,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const error = new Error("An error occured while fetching the events");
+        error.code = response.status;
+        error.info = await response.json();
+        throw error;
+      }
+
+      const data = await response.json();
+
+      data.map((item) => {
+        if (item.name == "Jessica Taylor") {
+          const base = item.diagnosis_history[0];
+          setHeartRate(base.heart_rate.value);
+          setRespiratoryRate(base.respiratory_rate.value);
+          setTemperature(base.temperature.value);
+
+          setHeartLevel(base.heart_rate.levels);
+          setRespiratoryLevel(base.respiratory_rate.levels);
+          setTemperatureLevel(base.temperature.levels);
+        }
+      });
+    }
+    fetchPatients();
+  }, [authString]);
+
   let svgIcon;
   svgIcon = (
     <svg width="9.999" height="5.479" viewBox="0 0 9.999 5.479">
@@ -22,22 +71,22 @@ const InfoBox = () => {
       <InfoBoxItem
         icon={respiratoryIcon}
         title="Respiratory Rate"
-        value="20 bpm"
-        state="Normal"
+        value={`${respiratoryRate} bpm`}
+        state={respiratoryLevel}
         bgColor="#E0F3FA"
       />
       <InfoBoxItem
         icon={temperatureIcon}
         title="Temperature"
-        value="98.6 &deg; F"
-        state="Normal"
+        value={`${temperature}`}
+        state={temperatureLevel}
         bgColor="#FFE6E9"
       />
       <InfoBoxItem
         icon={heartIcon}
         title="Heart Rate"
-        value="78 bpm"
-        state="Lower Than Average"
+        value={`${heartRate} bpm`}
+        state={heartLevel}
         bgColor="#FFE6F1"
         arrowIcon={svgIcon}
       />

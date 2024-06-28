@@ -2,6 +2,7 @@
   width: 149px;
   height: 84px;
   margin-right: 59px;
+  margin-left: 50px;
 }
 
 .container p:nth-last-of-type(1) {
@@ -23,6 +24,8 @@ h3 {
 
 hr {
   color: #cbc8d4;
+  transform: translateX(50px);
+  width: 80%;
 }
 
 .flex {
@@ -38,3 +41,9 @@ span {
   border-radius: 50%;
 }
 
+@media (max-width: 1600px) {
+  hr {
+    transform: translateX(0);
+    width: auto;
+  }
+}

@@ -1,6 +1,7 @@
 .chartBox {
-  height: 100% !important;
-  width: 70% !important;
+  max-height: 100% !important;
+  width: 60% !important;
+  height: 278px;
 }
 
 .chartBoxTitle {
@@ -30,8 +31,16 @@
   margin-bottom: 0;
 }
 
+@media (max-width: 1600px) {
+  .chartBox {
+    height: 298px;
+    width: 70% !important;
+  }
+}
+
 @media (max-width: 780px) {
   .chartBox {
     width: 100% !important;
+    height: 298px;
   }
 }

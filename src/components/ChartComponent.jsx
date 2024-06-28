@@ -4,7 +4,10 @@ import { useEffect, useState } from "react";
 import styles from "./ChartComponent.module.css";
 
 const ChartComponent = () => {
-  const [patients, setPatients] = useState([]);
+  const [sysLevel, setSysLevel] = useState();
+  const [sysHRate, setSysHRate] = useState();
+  const [diaLevel, setDiaLevel] = useState();
+  const [diaHRate, setDiaHRate] = useState();
 
   const username = "coalition";
   const password = "skills-test";
@@ -31,10 +34,21 @@ const ChartComponent = () => {
 
       const data = await response.json();
 
-      setPatients(data);
+      data.map((item) => {
+        if (item.name == "Jessica Taylor") {
+          // systolic
+          setSysLevel(item.diagnosis_history[0].blood_pressure.systolic.levels);
+          setSysHRate(item.diagnosis_history[0].blood_pressure.systolic.value);
+          //diastolic
+          setDiaLevel(
+            item.diagnosis_history[0].blood_pressure.diastolic.levels
+          );
+          setDiaHRate(item.diagnosis_history[0].blood_pressure.diastolic.value);
+        }
+      });
     }
     fetchPatients();
-  }, [patients, authString]);
+  }, [authString]);
 
   return (
     <div className={styles.chartContainer}>
@@ -42,17 +56,17 @@ const ChartComponent = () => {
       <div>
         <ChartResult
           title="Systolic"
-          hRate="160"
+          hRate={sysHRate}
           arrowDirection="up"
-          level="Higher than Average"
+          level={sysLevel}
           color="#E66FD2"
         />
         <hr />
         <ChartResult
           title="Diastolic"
-          hRate="78"
+          hRate={diaHRate}
           arrowDirection="down"
-          level="Lower than Average"
+          level={diaLevel}
           color="#8C6FE6"
         />
       </div>

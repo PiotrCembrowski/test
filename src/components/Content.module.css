@@ -5,8 +5,9 @@
 .content {
   box-sizing: border-box;
   width: 48vw;
+  height: 673px;
   flex-basis: 48%;
-  max-height: 673px;
+  height: 673px;
   margin-top: 32px;
   padding: 20px;
   border-radius: 16px;
